@@ -7,5 +7,8 @@ use App\Models\Train as Train;
 
 class TrainController extends Controller
 {
-    //
+    public function index() {
+        $trains = Train::all();
+        return view('index', compact('trains'));
+    }
 }
